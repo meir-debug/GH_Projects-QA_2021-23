@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "f1540667-2948-4e50-a889-6458a1354f29",
+		"name": "Nasa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9633171"
+	},
+	"item": [
+		{
+			"name": "Planetary",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"if(responseCode.code === 200){",
+							"   tests[\"Backend is available, status 200\"] = true;",
+							"}  else if (responseCode.code === 401) {",
+							"   tests[\"Not authorized, Check access token or Log in\"] = false;",
+							"}  else if (responseCode.code === 403) {",
+							"   tests[\"Forbiden\"] = false;",
+							"}  else if (responseCode.code === 404) {",
+							"   tests[\"Not Found. Check if you made correct request\"] = false;",
+							"}  else if (responseCode.code === 422) {",
+							"   tests[\"The instance is not valid\"] = false;",
+							"}  else if (responseCode.code === 500) {",
+							"   tests[\"Internal Server Error\"] = false;",
+							"}  else if (responseCode.code === 503) {",
+							"   tests[\"Service Unavailable\"] = false;",
+							"}  else {",
+							"   tests[\"Something went wrong. Check response body\"] = false;",
+							"}",
+							"tests['Response time is less than 1000 ms'] = responseTime < 1000;",
+							"",
+							"pm.test(\"Response size is less than 10kb\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(10240);",
+							"});",
+							"",
+							"pm.test(\"Response assertions\", function () {",
+							"    pm.response.to.be.ok;",
+							"    pm.response.to.be.json;",
+							"});",
+							"pm.test(\"Header is Correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Transfer-Encoding\", \"chunked\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"    pm.response.to.have.header(\"Strict-Transport-Security\", \"max-age=31536000; preload\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ao3FL5MqCqJhrdyQeZYLKm0ISCFDXecgQxDIA3Zz",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asteroids - NeoWs",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ao3FL5MqCqJhrdyQeZYLKm0ISCFDXecgQxDIA3Zz",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"neo",
+						"rest",
+						"v1",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "start_date",
+							"value": "2015-09-07"
+						},
+						{
+							"key": "end_date",
+							"value": "2015-09-08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coronal Mass Ejection",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ao3FL5MqCqJhrdyQeZYLKm0ISCFDXecgQxDIA3Zz",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "query",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "api_key",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://api.nasa.gov/DONKI/CME?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd&",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"DONKI",
+						"CME"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "yyyy-MM-dd"
+						},
+						{
+							"key": "endDate",
+							"value": "yyyy-MM-dd"
+						},
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,1018 @@
+{
+	"info": {
+		"_postman_id": "8c7cd121-08c1-40dd-a3ed-2b23f861b8c4",
+		"name": "crAPI Swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9633171"
+	},
+	"item": [
+		{
+			"name": "identity",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "v2",
+							"item": [
+								{
+									"name": "user",
+									"item": [
+										{
+											"name": "pictures",
+											"item": [
+												{
+													"name": "POST pictures",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/pictures",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"pictures"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/pictures",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"pictures"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"available_credit\": \"<number>\",\n  \"user\": {},\n  \"picture\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "change-email",
+											"item": [
+												{
+													"name": "POST change-email",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"old_email\": \"<string>\",\n  \"new_email\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/change-email",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"change-email"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"old_email\": \"<string>\",\n  \"new_email\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/change-email",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"change-email"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														},
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"old_email\": \"<string>\",\n  \"new_email\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/change-email",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"change-email"
+																	]
+																}
+															},
+															"status": "Forbidden",
+															"code": 403,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "dashboard",
+											"item": [
+												{
+													"name": "GET dashboard",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/dashboard",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"dashboard"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/dashboard",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"dashboard"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"number\": \"<string>\",\n  \"picture_url\": \"<string>\",\n  \"video_url\": {},\n  \"video_name\": {},\n  \"available_credit\": \"<number>\",\n  \"video_id\": \"<number>\",\n  \"role\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "reset-password",
+											"item": [
+												{
+													"name": "POST reset-password",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"password\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/reset-password",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"reset-password"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"password\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/reset-password",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"reset-password"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "vehicle",
+									"item": [
+										{
+											"name": "vehicles",
+											"item": [
+												{
+													"name": "GET vehicles",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/vehicle/vehicles",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"vehicle",
+																"vehicles"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/vehicle/vehicles",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"vehicle",
+																		"vehicles"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "[]"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "auth",
+							"item": [
+								{
+									"name": "login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"test_01@test.co\",\n    \"password\": \"w4X_6NHzj9%n:K7\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/identity/api/auth/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"identity",
+												"api",
+												"auth",
+												"login"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"auth": {
+						"type": "bearer",
+						"bearer": [
+							{
+								"key": "token",
+								"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0XzAxQHRlc3QuY28iLCJpYXQiOjE3MDc4MzczNzQsImV4cCI6MTcwNzkyMzc3NH0.fLI8NtqMknlEeTSbaIP7B29m8Xh6QHlqDbvh_J9IpReVUNpEg8qvb-nfx6REsb2vqjWG0X6FdWPkqOihFTwsdg",
+								"type": "string"
+							}
+						]
+					},
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "workshop",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "shop",
+							"item": [
+								{
+									"name": "products",
+									"item": [
+										{
+											"name": "GET products",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/workshop/api/shop/products",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"workshop",
+														"api",
+														"shop",
+														"products"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/workshop/api/shop/products",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"workshop",
+																"api",
+																"shop",
+																"products"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"products\": [\n    {\n      \"id\": \"<number>\",\n      \"name\": \"<string>\",\n      \"price\": \"<string>\",\n      \"image_url\": \"<string>\"\n    },\n    {\n      \"id\": \"<number>\",\n      \"name\": \"<string>\",\n      \"price\": \"<string>\",\n      \"image_url\": \"<string>\"\n    }\n  ],\n  \"credit\": \"<number>\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "community",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "v2",
+							"item": [
+								{
+									"name": "community",
+									"item": [
+										{
+											"name": "posts",
+											"item": [
+												{
+													"name": "recent",
+													"item": [
+														{
+															"name": "GET recent",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts/recent",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts",
+																		"recent"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/recent",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"recent"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  {\n    \"id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"author\": {\n      \"nickname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"vehicleid\": \"<string>\",\n      \"profile_pic_url\": \"<string>\",\n      \"created_at\": \"<string>\"\n    },\n    \"authorid\": \"<number>\",\n    \"CreatedAt\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"author\": {\n      \"nickname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"vehicleid\": \"<string>\",\n      \"profile_pic_url\": \"<string>\",\n      \"created_at\": \"<string>\"\n    },\n    \"authorid\": \"<number>\",\n    \"CreatedAt\": \"<string>\"\n  }\n]"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "eLCB4kAqXP3j5GnQbRBVam",
+													"item": [
+														{
+															"name": "comment",
+															"item": [
+																{
+																	"name": "POST comment",
+																	"request": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"content\": \"<string>\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/eLCB4kAqXP3j5GnQbRBVam/comment",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"eLCB4kAqXP3j5GnQbRBVam",
+																				"comment"
+																			]
+																		}
+																	},
+																	"response": [
+																		{
+																			"name": "OK",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"content\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/community/api/v2/community/posts/eLCB4kAqXP3j5GnQbRBVam/comment",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"community",
+																						"api",
+																						"v2",
+																						"community",
+																						"posts",
+																						"eLCB4kAqXP3j5GnQbRBVam",
+																						"comment"
+																					]
+																				}
+																			},
+																			"status": "OK",
+																			"code": 200,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"comments\": [\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    }\n  ],\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"name": "GET elcb4kaqxp3j5gnqbrbvam",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts/eLCB4kAqXP3j5GnQbRBVam",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts",
+																		"eLCB4kAqXP3j5GnQbRBVam"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/eLCB4kAqXP3j5GnQbRBVam",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"eLCB4kAqXP3j5GnQbRBVam"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "POST posts",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"title\": \"<string>\",\n  \"content\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/community/api/v2/community/posts",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"community",
+																"api",
+																"v2",
+																"community",
+																"posts"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"title\": \"<string>\",\n  \"content\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0XzAxQHRlc3QuY28iLCJpYXQiOjE3MDc5ODg4NTUsImV4cCI6MTcwODA3NTI1NX0.7o7vVRB-gpL9hWorrWfvNqxaVndXJxLqsjzstNruFsqOxyXU6jNvIlr4H86jE78HePAJPxKINdSQFkDt-x-Tqw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://crapi.apisec.ai"
+		}
+	]
+}

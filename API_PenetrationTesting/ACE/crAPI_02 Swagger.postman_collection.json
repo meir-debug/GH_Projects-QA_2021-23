@@ -1,0 +1,2405 @@
+{
+	"info": {
+		"_postman_id": "47e99bad-c899-4721-920f-0792958d746f",
+		"name": "crAPI_02 Swagger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9633171"
+	},
+	"item": [
+		{
+			"name": "identity",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "auth",
+							"item": [
+								{
+									"name": "login",
+									"item": [
+										{
+											"name": "POST login",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"test+2@test.co\",\n  \"password\": \"Password1!\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/identity/api/auth/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"identity",
+														"api",
+														"auth",
+														"login"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Untitled Response",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/auth/login",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"auth",
+																"login"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"token\": \"<string>\",\n  \"type\": \"<string>\",\n  \"message\": {}\n}"
+												},
+												{
+													"name": "Untitled Response",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/auth/login",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"auth",
+																"login"
+															]
+														}
+													},
+													"status": "Internal Server Error",
+													"code": 500,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"token\": {},\n  \"type\": \"<string>\",\n  \"message\": \"<string>\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "v2",
+							"item": [
+								{
+									"name": "user",
+									"item": [
+										{
+											"name": "dashboard",
+											"item": [
+												{
+													"name": "GET dashboard",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/dashboard",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"dashboard"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/dashboard",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"dashboard"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\",\n  \"number\": \"<string>\",\n  \"picture_url\": {},\n  \"video_url\": {},\n  \"video_name\": {},\n  \"available_credit\": \"<number>\",\n  \"video_id\": \"<number>\",\n  \"role\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "pictures",
+											"item": [
+												{
+													"name": "POST pictures",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/pictures",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"pictures"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/pictures",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"pictures"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<number>\",\n  \"name\": \"<string>\",\n  \"status\": \"<string>\",\n  \"available_credit\": \"<number>\",\n  \"user\": {},\n  \"picture\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "change-email",
+											"item": [
+												{
+													"name": "POST change-email",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"old_email\": \"<string>\",\n  \"new_email\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/change-email",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"change-email"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"old_email\": \"<string>\",\n  \"new_email\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/change-email",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"change-email"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														},
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"old_email\": \"<string>\",\n  \"new_email\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/change-email",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"change-email"
+																	]
+																}
+															},
+															"status": "Forbidden",
+															"code": 403,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "verify-email-token",
+											"item": [
+												{
+													"name": "POST verify-email-token",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"new_email\": \"<string>\",\n  \"token\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/verify-email-token",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"verify-email-token"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"new_email\": \"<string>\",\n  \"token\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/verify-email-token",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"verify-email-token"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "reset-password",
+											"item": [
+												{
+													"name": "POST reset-password",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"password\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/user/reset-password",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"user",
+																"reset-password"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"password\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/user/reset-password",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"user",
+																		"reset-password"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "vehicle",
+									"item": [
+										{
+											"name": "vehicles",
+											"item": [
+												{
+													"name": "GET vehicles",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/vehicle/vehicles",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"vehicle",
+																"vehicles"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/vehicle/vehicles",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"vehicle",
+																		"vehicles"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "[]"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "add_vehicle",
+											"item": [
+												{
+													"name": "POST add_vehicle",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"vin\": \"<string>\",\n  \"pincode\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/vehicle/add_vehicle",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"vehicle",
+																"add_vehicle"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"vin\": \"<string>\",\n  \"pincode\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/vehicle/add_vehicle",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"vehicle",
+																		"add_vehicle"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														},
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"vin\": \"<string>\",\n  \"pincode\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/vehicle/add_vehicle",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"vehicle",
+																		"add_vehicle"
+																	]
+																}
+															},
+															"status": "Forbidden",
+															"code": 403,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "resend_email",
+											"item": [
+												{
+													"name": "POST resend_email",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/identity/api/v2/vehicle/resend_email",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"identity",
+																"api",
+																"v2",
+																"vehicle",
+																"resend_email"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Untitled Response",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/vehicle/resend_email",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"vehicle",
+																		"resend_email"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"status\": \"<number>\"\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "4deb16de-20e6-47ce-826d-6d2031950129",
+											"item": [
+												{
+													"name": "location",
+													"item": [
+														{
+															"name": "GET location",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/identity/api/v2/vehicle/4deb16de-20e6-47ce-826d-6d2031950129/location",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"identity",
+																		"api",
+																		"v2",
+																		"vehicle",
+																		"4deb16de-20e6-47ce-826d-6d2031950129",
+																		"location"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "Untitled Response",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/identity/api/v2/vehicle/4deb16de-20e6-47ce-826d-6d2031950129/location",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"identity",
+																				"api",
+																				"v2",
+																				"vehicle",
+																				"4deb16de-20e6-47ce-826d-6d2031950129",
+																				"location"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"carId\": \"<string>\",\n  \"vehicleLocation\": {\n    \"id\": \"<number>\",\n    \"latitude\": \"<string>\",\n    \"longitude\": \"<string>\"\n  },\n  \"fullName\": \"<string>\"\n}"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "workshop",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "mechanic",
+							"item": [
+								{
+									"name": "GET mechanic",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/workshop/api/mechanic/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"workshop",
+												"api",
+												"mechanic",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/workshop/api/mechanic/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"workshop",
+														"api",
+														"mechanic",
+														""
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"mechanics\": [\n    {\n      \"id\": \"<number>\",\n      \"mechanic_code\": \"<string>\",\n      \"user\": {\n        \"email\": \"<string>\",\n        \"number\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<number>\",\n      \"mechanic_code\": \"<string>\",\n      \"user\": {\n        \"email\": \"<string>\",\n        \"number\": \"<string>\"\n      }\n    }\n  ]\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "merchant",
+							"item": [
+								{
+									"name": "contact_mechanic",
+									"item": [
+										{
+											"name": "POST contact_mechanic",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"mechanic_code\": \"<string>\",\n  \"problem_details\": \"<string>\",\n  \"vin\": \"<string>\",\n  \"mechanic_api\": \"<string>\",\n  \"repeat_request_if_failed\": \"<number>\",\n  \"number_of_repeats\": \"<number>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/workshop/api/merchant/contact_mechanic",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"workshop",
+														"api",
+														"merchant",
+														"contact_mechanic"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"mechanic_code\": \"<string>\",\n  \"problem_details\": \"<string>\",\n  \"vin\": \"<string>\",\n  \"mechanic_api\": \"<string>\",\n  \"repeat_request_if_failed\": \"<number>\",\n  \"number_of_repeats\": \"<number>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/workshop/api/merchant/contact_mechanic",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"workshop",
+																"api",
+																"merchant",
+																"contact_mechanic"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"response_from_mechanic_api\": {\n    \"id\": \"<number>\",\n    \"sent\": \"<number>\",\n    \"report_link\": \"<string>\"\n  },\n  \"status\": \"<number>\"\n}"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "shop",
+							"item": [
+								{
+									"name": "products",
+									"item": [
+										{
+											"name": "GET products",
+											"request": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/workshop/api/shop/products",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"workshop",
+														"api",
+														"shop",
+														"products"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/workshop/api/shop/products",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"workshop",
+																"api",
+																"shop",
+																"products"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"products\": [\n    {\n      \"id\": \"<number>\",\n      \"name\": \"<string>\",\n      \"price\": \"<string>\",\n      \"image_url\": \"<string>\"\n    },\n    {\n      \"id\": \"<number>\",\n      \"name\": \"<string>\",\n      \"price\": \"<string>\",\n      \"image_url\": \"<string>\"\n    }\n  ],\n  \"credit\": \"<number>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "orders",
+									"item": [
+										{
+											"name": "{id}",
+											"item": [
+												{
+													"name": "GET orders by id",
+													"request": {
+														"method": "GET",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/workshop/api/shop/orders/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"workshop",
+																"api",
+																"shop",
+																"orders",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<string>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/workshop/api/shop/orders/:id",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"workshop",
+																		"api",
+																		"shop",
+																		"orders",
+																		":id"
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"orders\": [\n    {\n      \"id\": \"<number>\",\n      \"user\": {\n        \"email\": \"<string>\",\n        \"number\": \"<string>\"\n      },\n      \"product\": {\n        \"id\": \"<number>\",\n        \"name\": \"<string>\",\n        \"price\": \"<string>\",\n        \"image_url\": \"<string>\"\n      },\n      \"quantity\": \"<number>\",\n      \"status\": \"<string>\",\n      \"transaction_id\": \"<string>\",\n      \"created_on\": \"<string>\"\n    },\n    {\n      \"id\": \"<number>\",\n      \"user\": {\n        \"email\": \"<string>\",\n        \"number\": \"<string>\"\n      },\n      \"product\": {\n        \"id\": \"<number>\",\n        \"name\": \"<string>\",\n        \"price\": \"<string>\",\n        \"image_url\": \"<string>\"\n      },\n      \"quantity\": \"<number>\",\n      \"status\": \"<string>\",\n      \"transaction_id\": \"<string>\",\n      \"created_on\": \"<string>\"\n    }\n  ]\n}"
+														}
+													]
+												},
+												{
+													"name": "POST orders by id",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"url": {
+															"raw": "{{baseUrl}}/workshop/api/shop/orders/:id?order_id=<number>",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"workshop",
+																"api",
+																"shop",
+																"orders",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "order_id",
+																	"value": "<number>"
+																}
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "<string>",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/workshop/api/shop/orders/:id?order_id=<number>",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"workshop",
+																		"api",
+																		"shop",
+																		"orders",
+																		":id"
+																	],
+																	"query": [
+																		{
+																			"key": "order_id",
+																			"value": "<number>"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "id"
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"message\": \"<string>\",\n  \"qr_code_url\": \"<string>\",\n  \"order\": {\n    \"id\": \"<number>\",\n    \"user\": {\n      \"email\": \"<string>\",\n      \"number\": \"<string>\"\n    },\n    \"product\": {\n      \"id\": \"<number>\",\n      \"name\": \"<string>\",\n      \"price\": \"<string>\",\n      \"image_url\": \"<string>\"\n    },\n    \"quantity\": \"<number>\",\n    \"status\": \"<string>\",\n    \"transaction_id\": \"<string>\",\n    \"created_on\": \"<string>\"\n  }\n}"
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "POST orders",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"product_id\": \"<number>\",\n  \"quantity\": \"<number>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/workshop/api/shop/orders",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"workshop",
+														"api",
+														"shop",
+														"orders"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"product_id\": \"<number>\",\n  \"quantity\": \"<number>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/workshop/api/shop/orders",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"workshop",
+																"api",
+																"shop",
+																"orders"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n  \"id\": \"<number>\",\n  \"message\": \"<string>\",\n  \"credit\": \"<number>\"\n}"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "return_qr_code",
+									"item": [
+										{
+											"name": "GET return_qr_code",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/workshop/api/shop/return_qr_code",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"workshop",
+														"api",
+														"shop",
+														"return_qr_code"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "OK",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/workshop/api/shop/return_qr_code",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"workshop",
+																"api",
+																"shop",
+																"return_qr_code"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "community",
+			"item": [
+				{
+					"name": "api",
+					"item": [
+						{
+							"name": "v2",
+							"item": [
+								{
+									"name": "coupon",
+									"item": [
+										{
+											"name": "validate-coupon",
+											"item": [
+												{
+													"name": "POST validate-coupon",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"coupon_code\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/community/api/v2/coupon/validate-coupon",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"community",
+																"api",
+																"v2",
+																"coupon",
+																"validate-coupon"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Internal Server Error",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"coupon_code\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/coupon/validate-coupon",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"coupon",
+																		"validate-coupon"
+																	]
+																}
+															},
+															"status": "Internal Server Error",
+															"code": 500,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{}"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "community",
+									"item": [
+										{
+											"name": "posts",
+											"item": [
+												{
+													"name": "recent",
+													"item": [
+														{
+															"name": "GET recent",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts/recent",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts",
+																		"recent"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/recent",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"recent"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "[\n  {\n    \"id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"author\": {\n      \"nickname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"vehicleid\": \"<string>\",\n      \"profile_pic_url\": \"<string>\",\n      \"created_at\": \"<string>\"\n    },\n    \"comments\": [\n      {\n        \"id\": \"<string>\",\n        \"content\": \"<string>\",\n        \"CreatedAt\": \"<string>\",\n        \"author\": {\n          \"nickname\": \"<string>\",\n          \"email\": \"<string>\",\n          \"vehicleid\": \"<string>\",\n          \"profile_pic_url\": \"<string>\",\n          \"created_at\": \"<string>\"\n        }\n      },\n      {\n        \"id\": \"<string>\",\n        \"content\": \"<string>\",\n        \"CreatedAt\": \"<string>\",\n        \"author\": {\n          \"nickname\": \"<string>\",\n          \"email\": \"<string>\",\n          \"vehicleid\": \"<string>\",\n          \"profile_pic_url\": \"<string>\",\n          \"created_at\": \"<string>\"\n        }\n      }\n    ],\n    \"authorid\": \"<number>\",\n    \"CreatedAt\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"title\": \"<string>\",\n    \"content\": \"<string>\",\n    \"author\": {\n      \"nickname\": \"<string>\",\n      \"email\": \"<string>\",\n      \"vehicleid\": \"<string>\",\n      \"profile_pic_url\": \"<string>\",\n      \"created_at\": \"<string>\"\n    },\n    \"comments\": [\n      {\n        \"id\": \"<string>\",\n        \"content\": \"<string>\",\n        \"CreatedAt\": \"<string>\",\n        \"author\": {\n          \"nickname\": \"<string>\",\n          \"email\": \"<string>\",\n          \"vehicleid\": \"<string>\",\n          \"profile_pic_url\": \"<string>\",\n          \"created_at\": \"<string>\"\n        }\n      },\n      {\n        \"id\": \"<string>\",\n        \"content\": \"<string>\",\n        \"CreatedAt\": \"<string>\",\n        \"author\": {\n          \"nickname\": \"<string>\",\n          \"email\": \"<string>\",\n          \"vehicleid\": \"<string>\",\n          \"profile_pic_url\": \"<string>\",\n          \"created_at\": \"<string>\"\n        }\n      }\n    ],\n    \"authorid\": \"<number>\",\n    \"CreatedAt\": \"<string>\"\n  }\n]"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "FEH7QzPmk2yNj8MtHMRhtV",
+													"item": [
+														{
+															"name": "comment",
+															"item": [
+																{
+																	"name": "POST comment",
+																	"request": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"content\": \"<string>\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/FEH7QzPmk2yNj8MtHMRhtV/comment",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"FEH7QzPmk2yNj8MtHMRhtV",
+																				"comment"
+																			]
+																		}
+																	},
+																	"response": [
+																		{
+																			"name": "OK",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"content\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/community/api/v2/community/posts/FEH7QzPmk2yNj8MtHMRhtV/comment",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"community",
+																						"api",
+																						"v2",
+																						"community",
+																						"posts",
+																						"FEH7QzPmk2yNj8MtHMRhtV",
+																						"comment"
+																					]
+																				}
+																			},
+																			"status": "OK",
+																			"code": 200,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"comments\": [\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    }\n  ],\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"name": "GET feh7qzpmk2ynj8mthmrhtv",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts/FEH7QzPmk2yNj8MtHMRhtV",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts",
+																		"FEH7QzPmk2yNj8MtHMRhtV"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/FEH7QzPmk2yNj8MtHMRhtV",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"FEH7QzPmk2yNj8MtHMRhtV"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"comments\": [\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    }\n  ],\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "ecV78Sm9yLTPDDhcjxHPV4",
+													"item": [
+														{
+															"name": "comment",
+															"item": [
+																{
+																	"name": "POST comment",
+																	"request": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"content\": \"<string>\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/ecV78Sm9yLTPDDhcjxHPV4/comment",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"ecV78Sm9yLTPDDhcjxHPV4",
+																				"comment"
+																			]
+																		}
+																	},
+																	"response": [
+																		{
+																			"name": "OK",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"content\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/community/api/v2/community/posts/ecV78Sm9yLTPDDhcjxHPV4/comment",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"community",
+																						"api",
+																						"v2",
+																						"community",
+																						"posts",
+																						"ecV78Sm9yLTPDDhcjxHPV4",
+																						"comment"
+																					]
+																				}
+																			},
+																			"status": "OK",
+																			"code": 200,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"comments\": [\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    }\n  ],\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"name": "GET ecv78sm9yltpddhcjxhpv4",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts/ecV78Sm9yLTPDDhcjxHPV4",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts",
+																		"ecV78Sm9yLTPDDhcjxHPV4"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/ecV78Sm9yLTPDDhcjxHPV4",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"ecV78Sm9yLTPDDhcjxHPV4"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "zdn7Nb8ABbsKhzpMxCqKSf",
+													"item": [
+														{
+															"name": "comment",
+															"item": [
+																{
+																	"name": "POST comment",
+																	"request": {
+																		"method": "POST",
+																		"header": [
+																			{
+																				"key": "Content-Type",
+																				"value": "application/json"
+																			},
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"body": {
+																			"mode": "raw",
+																			"raw": "{\n  \"content\": \"<string>\"\n}",
+																			"options": {
+																				"raw": {
+																					"headerFamily": "json",
+																					"language": "json"
+																				}
+																			}
+																		},
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/zdn7Nb8ABbsKhzpMxCqKSf/comment",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"zdn7Nb8ABbsKhzpMxCqKSf",
+																				"comment"
+																			]
+																		}
+																	},
+																	"response": [
+																		{
+																			"name": "OK",
+																			"originalRequest": {
+																				"method": "POST",
+																				"header": [
+																					{
+																						"key": "Content-Type",
+																						"value": "application/json"
+																					},
+																					{
+																						"key": "Accept",
+																						"value": "application/json"
+																					}
+																				],
+																				"body": {
+																					"mode": "raw",
+																					"raw": "{\n  \"content\": \"<string>\"\n}",
+																					"options": {
+																						"raw": {
+																							"headerFamily": "json",
+																							"language": "json"
+																						}
+																					}
+																				},
+																				"url": {
+																					"raw": "{{baseUrl}}/community/api/v2/community/posts/zdn7Nb8ABbsKhzpMxCqKSf/comment",
+																					"host": [
+																						"{{baseUrl}}"
+																					],
+																					"path": [
+																						"community",
+																						"api",
+																						"v2",
+																						"community",
+																						"posts",
+																						"zdn7Nb8ABbsKhzpMxCqKSf",
+																						"comment"
+																					]
+																				}
+																			},
+																			"status": "OK",
+																			"code": 200,
+																			"_postman_previewlanguage": "json",
+																			"header": [
+																				{
+																					"key": "Content-Type",
+																					"value": "application/json"
+																				}
+																			],
+																			"cookie": [],
+																			"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"comments\": [\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    }\n  ],\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																		}
+																	]
+																}
+															]
+														},
+														{
+															"name": "GET zdn7nb8abbskhzpmxcqksf",
+															"request": {
+																"method": "GET",
+																"header": [
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts/zdn7Nb8ABbsKhzpMxCqKSf",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts",
+																		"zdn7Nb8ABbsKhzpMxCqKSf"
+																	]
+																}
+															},
+															"response": [
+																{
+																	"name": "OK",
+																	"originalRequest": {
+																		"method": "GET",
+																		"header": [
+																			{
+																				"key": "Accept",
+																				"value": "application/json"
+																			}
+																		],
+																		"url": {
+																			"raw": "{{baseUrl}}/community/api/v2/community/posts/zdn7Nb8ABbsKhzpMxCqKSf",
+																			"host": [
+																				"{{baseUrl}}"
+																			],
+																			"path": [
+																				"community",
+																				"api",
+																				"v2",
+																				"community",
+																				"posts",
+																				"zdn7Nb8ABbsKhzpMxCqKSf"
+																			]
+																		}
+																	},
+																	"status": "OK",
+																	"code": 200,
+																	"_postman_previewlanguage": "json",
+																	"header": [
+																		{
+																			"key": "Content-Type",
+																			"value": "application/json"
+																		}
+																	],
+																	"cookie": [],
+																	"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"comments\": [\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    },\n    {\n      \"id\": \"<string>\",\n      \"content\": \"<string>\",\n      \"CreatedAt\": \"<string>\",\n      \"author\": {\n        \"nickname\": \"<string>\",\n        \"email\": \"<string>\",\n        \"vehicleid\": \"<string>\",\n        \"profile_pic_url\": \"<string>\",\n        \"created_at\": \"<string>\"\n      }\n    }\n  ],\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+																}
+															]
+														}
+													]
+												},
+												{
+													"name": "POST posts",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															},
+															{
+																"key": "Accept",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n  \"title\": \"<string>\",\n  \"content\": \"<string>\"\n}",
+															"options": {
+																"raw": {
+																	"headerFamily": "json",
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/community/api/v2/community/posts",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"community",
+																"api",
+																"v2",
+																"community",
+																"posts"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "OK",
+															"originalRequest": {
+																"method": "POST",
+																"header": [
+																	{
+																		"key": "Content-Type",
+																		"value": "application/json"
+																	},
+																	{
+																		"key": "Accept",
+																		"value": "application/json"
+																	}
+																],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n  \"title\": \"<string>\",\n  \"content\": \"<string>\"\n}",
+																	"options": {
+																		"raw": {
+																			"headerFamily": "json",
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/community/api/v2/community/posts",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"community",
+																		"api",
+																		"v2",
+																		"community",
+																		"posts"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "json",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "application/json"
+																}
+															],
+															"cookie": [],
+															"body": "{\n  \"id\": \"<string>\",\n  \"title\": \"<string>\",\n  \"content\": \"<string>\",\n  \"author\": {\n    \"nickname\": \"<string>\",\n    \"email\": \"<string>\",\n    \"vehicleid\": \"<string>\",\n    \"profile_pic_url\": \"<string>\",\n    \"created_at\": \"<string>\"\n  },\n  \"authorid\": \"<number>\",\n  \"CreatedAt\": \"<string>\"\n}"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0KzJAdGVzdC5jbyIsImlhdCI6MTcwODE2NDUzNCwiZXhwIjoxNzA4MjUwOTM0fQ.TUGB4FLoOJ9YOiMOOR4BWkD3PavVmJKOA9e5RcNmr32-Rk_IBzusWov21n43EC3wVxNzPJKxtJHCkVbks2wOIw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://crapi.apisec.ai"
+		}
+	]
+}
